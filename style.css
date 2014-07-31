@@ -830,7 +830,7 @@ a:active {
 	font-weight: normal;
 	line-height: 1em;
 	margin: 0;
-	text-transform: none;
+	text-transform: uppercase;
 	vertical-align: middle;
 }
 .site-title a {
