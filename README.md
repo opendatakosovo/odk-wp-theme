@@ -1,4 +1,10 @@
-Changelog
+The original theme is Spun 2.0.2: https://wordpress.org/themes/spun
+
+The Spun theme version used as a base for ODK's theme was last updated on 2013-12-04 and authored by Caroline Moore.
+
+Changelog from ODK:
+
+Changelog from Spun as of version 2.0.2:
 
 v2.0 - This is a major update! Lots of new features:
 * Add Customizer options for colored circles, post titles over circles, and full opacity navigation
