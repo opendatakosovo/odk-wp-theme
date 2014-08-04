@@ -21,10 +21,17 @@ endif;
 if ( 'no-thumbnail' != $postclass ) :
 	$thumb .= '<span class="thumbnail-title">' . get_the_title() . '</span>';
 endif;
+
+
+$title = esc_attr( the_title_attribute( 'echo=0' ) );
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class( $postclass ); ?>>
-	<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php echo $thumb; ?></a>
+
+<article align="center" id="post-<?php the_ID(); ?>" <?php post_class( $postclass ); ?>>
+	<a href="<?php the_permalink(); ?>" title="<?php echo $title; ?>" rel="bookmark">
+		<?php echo $thumb; ?>
+		<?php echo $title; ?>
+	</a>
 </article><!-- #post-<?php the_ID(); ?> -->
 
 <?php if ( $restore_widont )
