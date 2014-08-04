@@ -18,9 +18,7 @@ $spun_linkedin = get_theme_mod( 'jetpack-linkedin' );
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<?php do_action( 'spun_credits' ); ?>
-			<a href="http://wordpress.org/" rel="generator"><?php printf( __( 'Proudly powered by %s', 'spun' ), 'WordPress' ); ?></a>
-            <span class="sep"> | </span>
-        	<?php printf( __( 'Theme: %1$s by %2$s.', 'spun' ), 'spun', '<a href="http://carolinemoore.net/" rel="designer">Caroline Moore</a>' ); ?>
+			<a href="http://assemblio.com/" rel="generator"><?php printf( __( 'Proudly initiated and developed by %s', 'spun' ), 'Assemblio' ); ?></a>
 		</div><!-- .site-info -->
 		<?php if ( $spun_facebook || $spun_twitter || $spun_tumblr || $spun_linkedin ) : ?>
 			<div class="social-links">
