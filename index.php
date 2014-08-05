@@ -19,9 +19,10 @@ get_header(); ?>
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			<?php endif; ?>
 			<?php if ( have_posts() ) : ?>
-
+				<h5 class="topics-browser-header">Browse Topics</h5>
+				<hr/>
 				<?php /* Start the Loop */ ?>
-
+	
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php

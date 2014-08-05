@@ -1012,6 +1012,10 @@ a:active {
 /* =Content
 ----------------------------------------------- */
 
+.topics-browser-header{
+	padding-top:20px;
+}
+
 .sticky {
 }
 .single .hentry,
