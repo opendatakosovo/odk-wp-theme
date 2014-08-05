@@ -838,6 +838,64 @@ a:active {
 	color: #999;
 }
 
+.site-second-header{
+	background-color: #efefef;
+	height: 200px;
+	overflow: hidden;
+    width: 100%;
+}
+
+.site-second-header .title{
+	color: #000;
+	font-size: 32px;
+}
+
+.site-second-header .subtitle{
+	color: #99a3c1;
+	font-size: 23px;
+}
+
+.site-second-header .floater {
+    float: left;
+    height: 45%;
+    width: 100%;
+    margin-bottom: -50px;
+}
+
+/** Use the following classes when we will finally have lots of datasets **/
+/*
+.site-second-header{
+	background-color: #4679b2;
+	color: #fff;
+	height: 200px;
+}
+
+.site-second-header .title{
+	font-size: 32px;
+}
+
+.site-second-header .subtitle{
+	font-size: 23px;
+}
+
+
+.site-third-header{
+	text-transform: uppercase;
+	background-color: #efefef;
+	height: 200px;
+	font-size: 23px;
+}
+
+.site-third-header .title{
+	color: #000;
+}
+
+.site-third-header .subtitle{
+	color: #99a3c1;
+}
+*/
+
+
 /* =Homepage
 ----------------------------------------------- */
 
