@@ -843,6 +843,8 @@ a:active {
 	height: 200px;
 	overflow: hidden;
     width: 100%;
+	padding-left: 30px;
+	padding-right: 30px;
 }
 
 .site-second-header .title{
