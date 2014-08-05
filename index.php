@@ -13,6 +13,23 @@
 
 get_header(); ?>
 
+<?php
+/*
+In the index page we just want to display 'Topic' blogposts.
+Watch out, this alters the main query so we are going to have to clean
+up after by makin a call to wp_reset_query().
+
+FIXME: This is not the best approach, see: http://codex.wordpress.org/Function_Reference/query_posts
+	"It should be noted that using this to replace the main query on a page can increase page loading times,
+	in worst case scenarios more than doubling the amount of work needed or more. 
+	While easy to use, the function is also prone to confusion and problems later on. 
+	For general post queries, use WP_Query or get_posts"
+*/
+if (is_home() && !is_paged()){
+	query_posts( 'cat=4' );
+}
+?>
+
 		<header id="secondheader" class="site-second-header" role="banner">
 			<div class="floater"></div>
 			<div class="title">
@@ -65,6 +82,13 @@ get_header(); ?>
 
 			</div><!-- #content .site-content -->
 		</div><!-- #primary .content-area -->
+
+<?php
+if (is_home() && !is_paged()){
+	// We altered the main query so we are going to have to clean up by making a call to wp_reset_query().
+	wp_reset_query();
+}
+?>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
