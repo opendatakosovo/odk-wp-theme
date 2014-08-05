@@ -42,24 +42,4 @@
 		</nav><!-- .site-navigation .main-navigation -->
 	</header><!-- #masthead .site-header -->
 
-	<header id="secondheader" class="site-second-header" role="banner">
-		<div class="floater"></div>
-		<div class="title">
-			The home of Kosovo's open data
-		</div>
-		<div class="subtitle">
-			Hear you will find data and resources to conduct research, develop web and mobile applications, design data visualisation, and more.
-		</div>
-	</header>
-
-	<!-- Enable this when we finally have lots of datasets --!>
-	<!--header id="thirdheader" class="site-third-header" role="banner">
-		<div class="title">
-			Get Started
-		</div>
-		<div class="subtitle">
-			Search over 1,000 datasets
-		</div>
-	</header-->
-
 	<div id="main" class="site-main">
