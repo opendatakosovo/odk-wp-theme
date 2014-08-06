@@ -15,15 +15,9 @@
 	$post_class = str_replace(' hentry', ' page-hentry', $post_class);
 ?>
 
-<header id="secondheader" class="site-second-header" role="banner">
-	<div class="floater"></div>
-	<div class="title">
-		<?php the_title(); ?>
-	</div>
-	<div class="subtitle">
-		<?php echo WPSEO_Meta::get_value('metadesc', get_the_ID()); // Requires Yoast's Wordpress SEO?>
-	</div>
-</header>
+<?php
+	render_sub_header();
+?>
 
 <article id="post-<?php the_ID(); ?>" <?php $post_class; ?>>
 	<!--

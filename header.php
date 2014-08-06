@@ -19,6 +19,29 @@
 </head>
 
 <?php
+	/**
+	 * Print out a sub header.
+	 * The sub header displays the title of the page/post and the meta description.
+	 **/
+	function render_sub_header(){
+	
+		$meta_description = WPSEO_Meta::get_value('metadesc', get_the_ID());
+
+		$output = '<header id="secondheader" class="site-second-header" role="banner">';
+		$output .= 	'<div class="floater"></div>';
+		$output .=	'<div class="title">';
+		$output .=		get_the_title();
+		$output .=	'</div>';
+		$output .=	'<div class="subtitle">';
+		$output .=		$meta_description;
+		$output .=	'</div>';
+		$output .= '</header>';
+
+		echo $output;
+	}
+?>
+
+<?php
 	// Here we call body_class() and assign the echo into a variable so that we can str replace a styling class in it.
 	// Hacky, yes, but we don't want to change functions that are outside of the theme.
 	ob_start();

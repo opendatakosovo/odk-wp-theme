@@ -673,7 +673,7 @@ a:active {
 .error404 .content-area {
 	clear: both;
 	margin: 0 auto;
-	width: 800px;
+	width: 100%;
 }
 .widget-area {
 	clear: both;
@@ -915,7 +915,7 @@ a:active {
 	height: 180px;
 }
 
-.page-hentry {
+.page-hentry, .post-hentry{
 	float: left;
 	margin: 10px;
 	padding: 0;

@@ -3,10 +3,26 @@
  * @package Spun
  */
 ?>
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+<?php
+	render_sub_header();
+?>
+
+<?php
+	// Here we call post_class() and assign the echo into a variable so that we can str replace a styling class in it.
+	// Hacky, yes, but we don't want to change functions that are outside of the theme.
+	ob_start();
+	post_class();
+	$post_class = ob_get_clean();
+	$post_class = str_replace(' hentry', ' post-hentry', $post_class);
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php $post_class; ?>>
+	<!--
 	<header class="entry-header">
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	</header>
+	--><!-- .entry-header -->
 
 	<div class="entry-content">
 		<?php the_content(); ?>
