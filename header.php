@@ -18,7 +18,16 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<?php
+	// Here we call body_class() and assign the echo into a variable so that we can str replace a styling class in it.
+	// Hacky, yes, but we don't want to change functions that are outside of the theme.
+	ob_start();
+	body_class();
+	$body_class = ob_get_clean();
+	$body_class = str_replace('page ', 'home ', $body_class);
+?>
+
+<body <?php echo $body_class; ?>>
 <div id="page" class="hfeed site">
 	<?php do_action( 'before' ); ?>
 	<header id="masthead" class="site-header" role="banner">
