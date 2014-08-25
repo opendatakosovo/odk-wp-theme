@@ -1337,7 +1337,9 @@ object {
 	clear: both;
 	margin: 1.5em 0;
 	text-align: center;
+	display: none;
 }
+
 .site-content #nav-below .nav-previous a,
 .site-content #nav-below .nav-next a,
 .site-content #image-navigation .nav-previous a,
