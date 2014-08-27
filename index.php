@@ -59,7 +59,7 @@ if (is_home() && !is_paged()){
 				<h5 class="topics-browser-header">Browse Topics</h5>
 				<hr/>
 				<?php /* Start the Loop */ ?>
-	
+				<div class="topic-container">
 				<?php while ( have_posts() ) : the_post(); ?>
 
 					<?php
@@ -71,7 +71,7 @@ if (is_home() && !is_paged()){
 					?>
 
 				<?php endwhile; ?>
-
+				</div>
 				<?php spun_content_nav( 'nav-below' ); ?>
 
 			<?php elseif ( current_user_can( 'edit_posts' ) ) : ?>
