@@ -18,7 +18,7 @@ $spun_linkedin = get_theme_mod( 'jetpack-linkedin' );
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
 			<?php do_action( 'spun_credits' ); ?>
-			<a href="http://assemblio.com/" rel="generator"><?php printf( __( 'Proudly initiated and developed by %s', 'spun' ), 'Assemblio' ); ?></a>
+			<a href="http://assemblio.com/" rel="generator"><?php printf( __( 'Made in Kosovo by %s', 'spun' ), 'Assemblio LLC' ); ?></a>
 		</div><!-- .site-info -->
 		<?php if ( $spun_facebook || $spun_twitter || $spun_tumblr || $spun_linkedin ) : ?>
 			<div class="social-links">
