@@ -848,11 +848,9 @@ a:active {
 
 .site-second-header{
 	background-color: #efefef;
-	height: 200px;
 	overflow: hidden;
-    width: 100%;
-	padding-left: 30px;
-	padding-right: 30px;
+    	width: 100%;
+	padding: 25px;
 }
 
 .site-second-header .title{
