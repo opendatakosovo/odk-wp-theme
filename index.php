@@ -36,7 +36,7 @@ if (is_home() && !is_paged()){
 				The home of Kosovo's open data
 			</div>
 			<div class="subtitle">
-				Hear you will find data and resources to conduct research, develop web and mobile applications, design data visualisation, and more.
+				Here you will find data and resources to conduct research, develop web and mobile applications, design data visualisation, and more.
 			</div>
 		</header>
 
