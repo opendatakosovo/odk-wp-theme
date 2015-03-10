@@ -27,7 +27,7 @@ $title = esc_attr( the_title_attribute( 'echo=0' ) );
 ?>
 
 
-<article align="center" id="post-<?php the_ID(); ?>" <?php post_class( $postclass ); ?>>
+<article style="padding-top:40px" align="center" id="post-<?php the_ID(); ?>" <?php post_class( $postclass ); ?>>
 	<a href="<?php the_permalink(); ?>" title="<?php echo $title; ?>" rel="bookmark">
 		<?php echo $thumb; ?>
 		<?php echo $title; ?>
