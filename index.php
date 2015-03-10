@@ -26,7 +26,7 @@ FIXME: This is not the best approach, see: http://codex.wordpress.org/Function_R
 	For general post queries, use WP_Query or get_posts"
 */
 if (is_home() && !is_paged()){
-	query_posts( 'cat=4' );
+	query_posts( 'cat=5' );
 }
 ?>
 
@@ -56,7 +56,7 @@ if (is_home() && !is_paged()){
 				<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
 			<?php endif; ?>
 			<?php if ( have_posts() ) : ?>
-				<h5 class="topics-browser-header">Browse Topics</h5>
+				<h5 class="topics-browser-header">Browse Apps</h5>
 				<hr/>
 				<?php /* Start the Loop */ ?>
 				<div class="topic-container">
