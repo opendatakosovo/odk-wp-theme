@@ -15,7 +15,7 @@ get_header(); ?>
 
 <?php
 /*
-In the index page we just want to display 'Topic' blogposts.
+In the index page we just want to display 'Apps' blogposts.
 Watch out, this alters the main query so we are going to have to clean
 up after by makin a call to wp_reset_query().
 
@@ -26,7 +26,7 @@ FIXME: This is not the best approach, see: http://codex.wordpress.org/Function_R
 	For general post queries, use WP_Query or get_posts"
 */
 if (is_home() && !is_paged()){
-	query_posts( 'cat=5' );
+	query_posts( array( 'category__in' => array(5,15), 'posts_per_page' => 1, 'showposts' => -1 ) );
 }
 ?>
 
@@ -61,17 +61,44 @@ if (is_home() && !is_paged()){
 				<?php /* Start the Loop */ ?>
 				<div class="topic-container">
 				<?php while ( have_posts() ) : the_post(); ?>
-
-					<?php
+					<?php if( in_category( '5') ) : ?>
+						<?php
 						/* Include the Post-Format-specific template for the content.
 						 * If you want to overload this in a child theme then include a file
 						 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 						 */
-						get_template_part( 'content', 'home' );
-					?>
 
+							get_template_part( 'content', 'home' );
+						?>
+					<?php endif; ?>
 				<?php endwhile; ?>
 				</div>
+				<?php /* Now let's show the blogpost/article posts */ ?>
+				<?php if ( have_posts() ) : ?>
+				<h5 class="topics-browser-header" style="padding-top:100px">Browse Articles</h5>
+				<hr/>
+				<?php /* Start the Loop */ ?>
+				<div class="topic-container">
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php if( in_category( '15') ) : ?>
+						<?php
+							/* Include the Post-Format-specific template for the content.
+						 	* If you want to overload this in a child theme then include a file
+						 	* called content-___.php (where ___ is the Post Format name) and that will be used instead.
+						 	*/
+							get_template_part( 'content', 'home' );
+						?>
+					<?php endif; ?>
+				<?php endwhile; ?>
+				</div>
+				<?php spun_content_nav( 'nav-below' ); ?>
+
+			<?php elseif ( current_user_can( 'edit_posts' ) ) : ?>
+
+				<?php get_template_part( 'content', 'none' ); ?>
+
+			<?php endif; ?>
+
 				<?php spun_content_nav( 'nav-below' ); ?>
 
 			<?php elseif ( current_user_can( 'edit_posts' ) ) : ?>
