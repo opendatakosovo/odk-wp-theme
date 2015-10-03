@@ -20,7 +20,7 @@ get_header(); ?>
 				<?php ( '' != get_post_format() ) ? $format = get_post_format() : $format = 'single'; ?>
 
 				<?php get_template_part( 'content', $format ); ?>
-
+				
 				<?php spun_content_nav( 'nav-below' ); ?>
 
 				<?php
